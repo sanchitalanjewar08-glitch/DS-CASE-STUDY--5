@@ -1,0 +1,21 @@
+
+
+text = input("Enter a word: ")
+
+frequency = {}
+
+for ch in text:
+    if ch in frequency:
+        frequency[ch] += 1
+    else:
+        frequency[ch] = 1
+
+print("Character Frequencies:")
+for ch in frequency:
+    print(ch, ":", frequency[ch])
+
+print("\nCharacter Codes:")
+
+for i, ch in enumerate(frequency):
+    print(ch, ":", bin(i)[2:])
+
