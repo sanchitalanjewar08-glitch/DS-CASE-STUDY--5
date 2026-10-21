@@ -1,0 +1,24 @@
+
+graph = {
+    'A': {'B': 4, 'C': 2},
+    'B': {'A': 4, 'D': 5},
+    'C': {'A': 2, 'D': 3},
+    'D': {'B': 5, 'C': 3}
+}
+
+
+print("City Map:")
+for city in graph:
+    print(city, ":", graph[city])
+
+
+start = input("Enter starting city (A/B/C/D): ")
+end = input("Enter destination city (A/B/C/D): ")
+
+if start in graph and end in graph:
+    if end in graph[start]:
+        print("Distance:", graph[start][end], "km")
+    else:
+        print("Cities are not directly connected")
+else:
+    print("Invalid city")
